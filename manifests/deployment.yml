@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: jyeapache 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jyeapache
+  template:
+    metadata:
+      labels:
+        app: jyeapache 
+    spec:
+      containers:
+        - name: jyeapache 
+          image: jyecontainerregistry.azurecr.io/jyeapache
+          ports:
+          - containerPort: 80
