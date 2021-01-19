@@ -1,2 +1,2 @@
-FROM httpd:2.4.41
+FROM httpd
 WORKDIR /usr/local/apache2
